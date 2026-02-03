@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Resume1.css">
+    <meta name="viewport" content="width=device-width,initial-sccale=1.0">
+    <title>FATHIMA SAFRIN'S RESUME</title>
+    <img src="images/asmi.png" rel="Fathima" width="80px" height="80px" style="float:center">
+</head>
+<body>
+    <div id="detail">
+    <header><h1 class="head">Fathima Safrin</h1></header>
+    <hr>
+    <p>Hello everyone ,i am going to present my website about my resume which is created by the html using the visual studio code
+    </p>
+    <nav class="bar">
+        <ul>
+            <li><a href="#edu">Education</a></li>
+            <li><a href="#intern">Internships</a></li>
+            <li><a href="#inter">Interests</a></li>
+            <li><a href="#add">additional informations</a></li>
+        </ul>
+    </nav>
+    <section id="edu">
+        <h2>Education</h2>
+        <hr>
+        <dl>
+            <dt>School name : BHSS</dt>
+            <dd>      I finished my schooling in the brindhavan higher secondary school from the ukg tp 12 th standard  in my schooling i just  wanna pursue the degree in field of information technology  unfortunetly my one of friends of mine was not able to join with me .then i had no option other than joining in the periyar maniammai institute of science and technology </dd>
+            <dt>Higher studies :PMIST</dt>
+            <dd >       I am studying in the instite with the name of periyar maniammai institue of science and technology 
+                 at first i overwhelmed about this colledge but it just the trap the staff are really worst 
+            </dd>
+        </dl>
+    </section>
+    <section id="intern">
+        <h2>Internships</h2>
+        <hr>
+        <table>
+        <tr>
+            <th>Company  Name</th>
+            <th>Role</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>Inforios software developmet</td>
+            <td>Python intern</td>
+            <td>1 month</td>
+        </tr>
+         <tr>
+            <td>Cognifyzz Tecchnologies</td>
+            <td> Web developer Intern</td>
+            <td>1 month</td>
+        </tr>
+     <tr>
+            <td>CodeAlpha</td>
+            <td>Web Developer intern</td>
+            <td>1 month</td>
+        </tr></table>
+    </section>
+
+    <section id="inter">
+        <h2>Interests</h2>
+        <hr>
+        <ol><p>I'm interested in the </p>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javasccript</li>
+            <li>React</li>
+            <li>Bootstrap</li>
+            <li>C language</li>
+            <li>Cpp</li>
+        </ol>
+    </section>
+    <section id="add">
+        <h2>Add information</h2>
+        <hr>
+        <h3> certifications </h3>
+        <ol><li>programming in c</li>
+        <li>introduction to wordpress</li>
+        <li>introduction to excel</li>
+        <li>introduction to html</li>
+        <li>introduction to Javascript</li></ol>
+    </section>
+    <hr>
+    <footer class="contact me"> Contact  Me!!
+        <ul>
+        <p>My Mail id:<a href="mailto:fathimsafrin1603@gmail.com">Email Address</a></p>
+         phone no:6381421318
+         <p id="copy">Copyright(c) 2025 Fathima Safrin Conntact Plaease Contact me to find more information</p>
+        </ul>
+    </footer>
+    </div>
+</body>
+</html>
