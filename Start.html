@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Two Images</title>
+    <style>
+        body {
+            margin:10px;
+            background-color: black;
+            overflow: hidden;
+        }
+        p {
+            color: palevioletred;
+            font-size: 22px;
+            margin: 10px;
+        }
+        .player {
+            position: absolute;
+            width: 120px;
+            box-shadow: 0 10px 25px rgb(170, 29, 76);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<p>Start the game!!!</p>
+<img class="player" src="456.jpg" alt="Player 1">
+<img class="player" src="OIP.jpg" alt="Player 2">
+<script>
+const outputs = document.querySelectorAll('.player');
+const sound=new Audio('music.mp3')
+const controller = {
+    x: 50,
+    y: 120,
+    speed: 10
+};
+outputs.forEach((img, index) => {
+    img.style.left = (controller.x + index * 150) + 'px';
+    img.style.top  = controller.y + 'px';
+});
+const keyz = {
+    ArrowUp: false,
+    ArrowDown: false,
+    ArrowLeft: false,
+    ArrowRight: false
+};
+window.addEventListener('keydown', e => {
+    if (keyz.hasOwnProperty(e.code)) {keyz[e.code] = true;
+    document.body.style.backgroundColor='#d87093'
+    sound.play();
+    }
+});
+window.addEventListener('keyup', e => {
+    if (keyz.hasOwnProperty(e.code)) keyz[e.code] = false;
+    document.writeln('THE GAME END!!!!!');
+    document.body.style.backgroundColor='#d87093';
+    document.body.style.color='black'
+    document.body.style.fontSize='200px'
+    document.body.style.textAlign='center'
+    document.body.style.paddingTop='250px'
+    
+});
+let firstImageDone=false;
+function moveMe() {
+    if (keyz.ArrowRight) controller.x += controller.speed;
+    if (keyz.ArrowLeft)  controller.x -= controller.speed;
+    if (keyz.ArrowUp)    controller.y -= controller.speed;
+    if (keyz.ArrowDown)  controller.y += controller.speed;
+    outputs[0].style.left=controller.x + 'px'
+    outputs[0].style.top=controller.y + 'px'
+    if( controller.x>=900){
+        firstImageDone=true;
+    }
+    if(firstImageDone){
+        outputs[1].style.left = (controller.x - 150) +'px';
+        outputs[1].style.top = controller.y +'px';
+    }
+    requestAnimationFrame(moveMe);
+}
+moveMe();
+</script>
+</body>
+</html>
